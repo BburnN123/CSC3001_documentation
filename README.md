@@ -331,3 +331,76 @@ The standard way of organising the the import
 /* TYPES */
 ```
 
+
+# Design
+Ant Design
+
+[Documentation](https://ant.design/)
+[Github Repository](https://github.com/ant-design/ant-design)
+
+https://dev.to/burhanuday/using-ant-design-with-nextjs-custom-variables-for-ant-design-57m5
+```bash
+npm install --save antd@4.15.6
+```
+
+Version 4.15.6
+
+
+# Ant Design 
+Total coloumn span is 24
+
+
+CSS
+DO NOT USE FLEX
+
+Pagination how it should work in the server side,
+- Break down to different component and query it at the end of the line
+- Understand the different options that the page need and set the configuration accordingly
+- At the client side, do not try to hardcode the thing like the default sorting, page row/ page number
+- Manipulate the state well
+
+Client Side API
+- Do not try to fetch multiple time
+- Instead of fetching multiple time, remove any duplication and fetch
+- Hashmap(map in js) is better than array because it doesn't need to tranverse the whole array
+
+Pagination take what we need from the server
+Why do we use server side pagination instead of client side pagination
+- The client side table is using the google ram memory to store the data, this will cause the lag
+- Instead of using the client side table, we will use the server and take what we needed
+- This will be faster because this will depend on the latency instead of jamming the web browser (is this correct?)
+
+Loading UX
+- Purposely set a delay to prevent the shock from the user
+- A human eye will take estimate 300 second to recover
+
+## Naming Convention
+
+- https://betterprogramming.pub/zen-naming-convention-5314aa0ab67a
+- https://docs.microsoft.com/en-us/dynamicsax-2012/developer/naming-conventions-methods
+
+Imperative naming is allowed when necessary
+
+| Prefix     | Description                                                                                                                                                                                                                                                               | Examples                               |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| do         | Used when you are using a debounce for the function                                                                                                                                                                                                                       | doSearchSellerItem                     |
+| set        | When we are trying to set the state of the components or data, else wise                                                                                                                                                                                                  | setSellerItemDataSource                |
+| get        | When the data is required to retrieve from the server                                                                                                                                                                                                                     | getSellerItem                          |
+| getAndSet  | The data is retrieved from the server, and the state is being set                                                                                                                                                                                                         | getAndSetSellerItemDataSource          |
+| is         | <ul><li>Boolean naming convention should be positive</li><li>Instead of "isDisabled", it should become "isEnabled"</li><li>Instead of "isUndefined", it should become "isDefined"</li><ul>                                                                                | isPhoneNumberExists                    |
+| handle     | <ul><li>When using react component event handlers, should append handle. E.g. handleOnClick, handleOnChange</li><li>To specify the different button to be used, please add handleOnClick\<Components\>\<Type\>Event, E.g. handleOnChangeDropDownCategoriesEvent</li></ul> | handleOnChangeDropDownCategoriesEvent  |
+| validate   | When you are trying to validate an input or object                                                                                                                                                                                                                        | valiadteInputFields                    |
+
+/* NODE MODULES */
+
+/* CONTEXT */
+
+/* UI COMPONENTS */
+
+/* SERVICES */
+
+/* UTILS & CONFIG */
+
+/* TYPES */
+
+
